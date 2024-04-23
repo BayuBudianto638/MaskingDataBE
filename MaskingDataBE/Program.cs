@@ -16,6 +16,7 @@
         Console.ReadKey();
     }
 }
+
 public static class ExtensionMethods
 {
     public static string MaskString(this string stringToMask, string mask, int show)
@@ -24,6 +25,7 @@ public static class ExtensionMethods
             maskedString + (maskedString.Length < stringToMask.Length - show ? mask : nextValueToMask.ToString()));
     }
 }
+
 public class User
 {
     public string Name { get; set; }
