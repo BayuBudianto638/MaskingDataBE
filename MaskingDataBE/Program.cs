@@ -13,8 +13,8 @@ static class Program
 
         foreach (User user in users)
         {
-            //var length = user.Password.Length - 4;
-            //user.Password = GetSHA256Hash(user.Password.Substring(0, length));
+            var length = user.Password.Length - 4;
+            user.Password = GetSHA256Hash(user.Password.Substring(0, length));
             user.Password = user.Password.MaskString("*", 4);
             Console.WriteLine("Name: " + user.Name + ", Password: " + user.Password);
         }
